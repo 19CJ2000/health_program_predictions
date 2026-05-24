@@ -42,10 +42,12 @@ NSP Project/
 ├── python/
 │   ├── _01_sim_out1.py
 │   ├── _02_sim_out2.py
-│   ├── _03_analysis_descrip.sql
 │   ├── _04_sql_import.py
 │   ├── _05_analysis_out1.py
 │   └── _06_analysis_out2.py
+│
+├── SQL/
+│   └── _03_dbm.sql
 │
 ├── data/
 │   ├── df_outcome2.csv
@@ -135,6 +137,8 @@ The project includes a relational PostgreSQL schema with:
 ---
 
 # Reproducibility
+
+Run files in order from _01_ to _06_...
 
 Database credentials are stored locally using a `.env` file and excluded from GitHub using `.gitignore`.
 
