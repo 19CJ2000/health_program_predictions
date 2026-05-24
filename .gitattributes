@@ -1,0 +1,11 @@
+# Keep SQL counted
+*.sql linguist-detectable=true
+
+# Ignore generated outputs
+outputs/** linguist-generated=true
+
+# Ignore virtual env
+.venv/** linguist-vendored
+
+# Ignore caches
+__pycache__/** linguist-generated=true
