@@ -1,0 +1,25 @@
+Variable,Variable name,Description,Type,Value
+Appointment ID,app_id,Unique appointment identifier.,Integer,1 to n appointments
+Appointment Type,app_type,Type of appointment scheduled.,Categorical,Intake; Follow-up
+Appointment Distance,app_dist,Simulated travel distance to appointment location.,Numeric continuous,Positive numeric distance; capped near 20 in simulation
+Appointment Time Match,app_time_match,Indicator for whether the scheduled appointment time matched the patient's preferred time.,Categorical,0 = preferred time did not match; 1 = preferred time matched
+Confirmation Rate,conf_rate,Simulated appointment confirmation rate based on outreach attempts.,Numeric proportion,0.0; 0.5; 1.0
+Response Delay,resp_rate,"Simulated response delay to program outreach, measured in hours.",Numeric continuous,Positive numeric hours; capped near 72 in simulation
+Patient ID,patient_id,Unique patient identifier linking patient-level and appointment-level records.,Integer,1 to n patients
+Substance Type,sub_type,Simulated substance-use profile category.,Categorical,Dep; Stim; Opi; Other
+Symptom Severity,sym_severity,Simulated symptom severity score.,Categorical,0 to 5
+Car Available,car_aval,Indicator for whether the patient had access to a car.,Categorical,0 = no car access; 1 = car access
+Prior Cancellation History,cancel_hist,Simulated prior cancellation tendency influenced by patient-level characteristics.,Numeric proportion,0 to 1
+Appointment Cancelled,cancelled,Observed simulated appointment cancellation outcome.,Categorical,0 = appointment attended/not cancelled; 1 = appointment cancelled or missed
+Simulated Cancellation Probability,prob_cancel,Latent simulated cancellation probability used to generate the observed cancellation outcome; excluded from predictive modeling to avoid leakage.,Numeric proportion,0 to 1
+Province,prov,Province for regional therapist demand panel.,Categorical,BC; AB; ON; QC
+Urban/Rural Region,urb_rur,Urban/rural regional classification.,Categorical,U; R
+Month,mon,Calendar month for the regional demand observation.,Date,Monthly date in YYYY-MM-DD format
+New Patient Intake,new_pt,Simulated number of new patient intakes for the region-month.,Integer count,Non-negative integer
+Relapse Rate,relaps_rate,Simulated regional relapse burden for the region-month.,Numeric proportion,0 to 1; clipped to realistic simulation range
+Overdose Alert Flag,od_flag,Indicator for whether an overdose alert occurred in the region-month.,Categorical,0 = no overdose alert; 1 = overdose alert
+Seasonal Peak Flag,szn_flag,Indicator for peak seasonal demand months.,Categorical,0 = non-peak month; 1 = peak month
+Sessions Lag 1 Month,sess_lag1,Therapist sessions from the previous month for the same region.,Integer count,Non-negative integer
+Sessions Lag 2 Months,sess_lag2,Therapist sessions from two months prior for the same region.,Integer count,Non-negative integer
+Sessions Lag 12 Months,sess_lag12,Therapist sessions from the same month in the prior year for the same region.,Integer count,Non-negative integer
+Next-Month Therapist Demand,pred_demand,Next-month therapist session demand target for forecasting.,Numeric continuous,Non-negative numeric session count
